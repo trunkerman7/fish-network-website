@@ -1,0 +1,71 @@
+/* Shared surfaces, inquiry layouts, and feedback. Original artwork stays intact. */
+.fish-copy-v2 { --fn-feedback: 160ms; --fn-ease: var(--fish-home-ease-out, cubic-bezier(.23,1,.32,1)); }
+.fish-copy-v2.fish-copy-v2 main > section { background-color: var(--school-bg); }
+.fish-copy-v2.fish-copy-v2 :is(.school-inquiry,.route-inquiry) { border-top:1px solid var(--school-rule); }
+.fish-copy-v2.fish-copy-v2 :is(.school-inquiry__layout,.route-inquiry__inner) {
+  display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:var(--composition-gap); align-items:start;
+}
+.fish-copy-v2.fish-copy-v2 :is(.school-inquiry__layout,.route-inquiry__inner) > div { position:static; padding:0; }
+.fish-copy-v2.fish-copy-v2 :is(.school-inquiry,.route-inquiry) h2 { margin:24px 0; }
+.fish-copy-v2.fish-copy-v2 :is(.school-inquiry__layout,.route-inquiry__inner) > div > p { margin:0; color:var(--school-muted); max-width:52ch; }
+.fish-copy-v2.fish-copy-v2 .school-inquiry__form {
+  width:100%; max-width:660px; padding:32px; gap:24px; margin:0; background:var(--school-raised); justify-self:end;
+}
+.fish-copy-v2.fish-copy-v2 .school-inquiry__form p { margin:0; max-width:none; }
+.fish-copy-v2.fish-copy-v2 .school-inquiry__form .school-inquiry__preview { color:var(--school-lavender); padding:14px 16px; }
+.fish-copy-v2.fish-copy-v2 .school-inquiry__form .school-form__label { color:var(--school-cream); }
+.fish-copy-v2.fish-copy-v2 .school-form__label > span { color:var(--school-muted); }
+.fish-copy-v2.fish-copy-v2 .school-form__row { align-items:start; gap:20px; }
+.fish-copy-v2.fish-copy-v2 .school-inquiry__form :is(input:not([type=checkbox]),select,textarea) { background:var(--school-surface); border-radius:0; }
+.fish-copy-v2.fish-copy-v2 .school-inquiry__form textarea { min-height:160px; }
+.fish-copy-v2.fish-copy-v2 .school-inquiry__form .school-form__check input { width:18px; height:18px; min-height:18px; padding:0; accent-color:var(--school-lavender); }
+.fish-copy-v2.fish-copy-v2 .school-form__status:empty { display:none; }
+/* Reading surfaces gain a restrained highlight without pretending to be links. */
+.fish-copy-v2 :is(.route-card,.school-mandate,.route-steps li,.v2-problem-columns article,.v2-paths article) { position:relative; isolation:isolate; }
+.fish-copy-v2 :is(.route-card,.school-mandate,.route-steps li,.v2-problem-columns article,.v2-paths article)::before {
+  content:""; position:absolute; inset:0; z-index:-1; pointer-events:none; background:var(--school-surface); opacity:0; transition:opacity var(--fn-feedback) var(--fn-ease);
+}
+@media(hover:hover) and (pointer:fine) {
+  .fish-copy-v2 :is(.route-card,.school-mandate,.route-steps li,.v2-problem-columns article,.v2-paths article):hover::before { opacity:.65; }
+  .fish-copy-v2 .fn-layer-control:hover { color:var(--school-cream); border-color:var(--school-lavender); }
+}
+.fish-copy-v2 :is(.route-card,.school-mandate,.v2-paths article):focus-within::before { opacity:.65; transition:none; }
+.fish-copy-v2 .fn-layer-controls { display:flex; gap:8px; flex-wrap:wrap; }
+.fish-copy-v2 .fn-layer-control { font:inherit; color:inherit; border:1px solid var(--school-rule); background:transparent; padding:10px 12px; cursor:pointer; min-height:44px; }
+.fish-copy-v2 .fn-layer-control[aria-pressed=true] { color:var(--school-cream); background:var(--school-surface); border-color:var(--school-lavender); }
+.fish-copy-v2 .fn-layer-control:focus-visible { outline:2px solid var(--school-lavender); outline-offset:3px; }
+/* Reuse the site's accessible accordion behavior for the four evidence steps. */
+.fish-copy-v2.fish-copy-v2 .v2-evidence-timeline { grid-template-columns:1fr; }
+.fish-copy-v2.fish-copy-v2 .v2-evidence-timeline li { padding:0; border:0; border-bottom:1px solid var(--school-rule); }
+.fish-copy-v2.fish-copy-v2 .v2-evidence-timeline li:last-child { border-bottom:0; }
+.fish-copy-v2.fish-copy-v2 .v2-evidence-timeline h3 { margin:0; }
+.fish-copy-v2 .fn-evidence-toggle { display:grid; grid-template-columns:44px 1fr 24px; align-items:center; gap:16px; width:100%; padding:24px 0; border:0; background:transparent; color:var(--school-cream); text-align:left; font:inherit; cursor:pointer; }
+.fish-copy-v2.fish-copy-v2 .fn-evidence-toggle .fish-platform__eyebrow { margin:0; }
+.fish-copy-v2 .fn-evidence-toggle i { font:20px var(--fonts-sans); text-align:center; }
+.fish-copy-v2 .fn-evidence-toggle[aria-expanded=true] { color:var(--school-lavender); }
+.fish-copy-v2 .fn-evidence-toggle[aria-expanded=true] i { transform:rotate(45deg); }
+.fish-copy-v2.fish-copy-v2 .fn-evidence-panel { padding:0 40px 24px 60px; max-width:76ch; }
+@media(hover:hover) and (pointer:fine) {
+  .fish-copy-v2 .fn-evidence-toggle:hover { color:var(--school-lavender); }
+}
+.fish-copy-v2 [data-fn-component] { cursor:pointer; }
+.fish-copy-v2 [data-fn-component]:focus-visible { outline:2px solid var(--school-lavender); outline-offset:4px; }
+.fish-copy-v2 [data-fn-component][aria-pressed=true]::before { opacity:.65; }
+.fish-copy-v2 .fn-component-toggle { border:0; background:none; padding:0; color:inherit; font:inherit; text-align:left; cursor:pointer; width:100%; }
+.fish-copy-v2 .fn-component-toggle[aria-pressed=true] { color:var(--school-lavender); }
+.fish-copy-v2 [data-fish-figure="protocol-flow"].fn-linked .fish-site-figure__module { transition:opacity var(--fn-feedback) var(--fn-ease); transition-delay:0s; }
+.fish-copy-v2 [data-fish-figure="protocol-flow"].fn-linked .fish-site-figure__module:not(.fn-highlight) { opacity:.28; }
+.fish-copy-v2 [data-fish-figure="protocol-flow"].fn-instant .fish-site-figure__module { transition:none; }
+@media(max-width:899px) {
+  .fish-copy-v2.fish-copy-v2 :is(.school-inquiry__layout,.route-inquiry__inner) { grid-template-columns:1fr; }
+  .fish-copy-v2.fish-copy-v2 .school-inquiry__form { max-width:none; justify-self:stretch; }
+}
+@media(max-width:600px) {
+  .fish-copy-v2.fish-copy-v2 .school-inquiry__form { padding:24px 20px; }
+  .fish-copy-v2 .fn-evidence-toggle { grid-template-columns:28px 1fr 20px; gap:12px; }
+  .fish-copy-v2.fish-copy-v2 .fn-evidence-panel { padding-left:40px; padding-right:0; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .fish-copy-v2 :is(.route-card,.school-mandate,.route-steps li,.v2-problem-columns article,.v2-paths article)::before,
+  .fish-copy-v2 [data-fish-figure="protocol-flow"].fn-linked .fish-site-figure__module { transition:none; }
+}

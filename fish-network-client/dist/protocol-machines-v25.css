@@ -1,0 +1,17 @@
+/* Added after v13: material detail uses the approved architecture interactions. */
+.protocol-art__svg :is(path,polygon,polyline,circle) { vector-effect:non-scaling-stroke; stroke-linejoin:round; }
+.protocol-art__svg .pa-top { fill:#131c2e; stroke:#9eacc8; stroke-width:.9; }
+.protocol-art__svg .pa-side { fill:#0b1220; stroke:#6b7d9d; stroke-width:.8; }
+.pa-bevel,.pa-contact,.pa-boundary { fill:none; stroke:#6c81a4; stroke-width:.6; }
+.pa-pin { fill:#c4cbe5; }
+.protocol-art__svg .pa-base { opacity:.52; }
+.protocol-art__svg .pa-edges :is(path,polygon,polyline,circle) { fill:none; stroke:#d7d0f5; }
+.protocol-art__svg .pa-edges .pa-top { fill:#101725; }
+.protocol-art__svg .pa-edges .pa-side { fill:#0b111d; }
+/* Solid dark faces hide back edges during the trace. The final color layer
+   sits above that trace, so fine detail never becomes a translucent wire cage. */
+.protocol-art__svg .pa-fill :is(path,polygon,polyline,circle) { stroke:#b8bedc; }
+.protocol-art__svg .pa-fill .pa-top { fill:#39466e; }
+.protocol-art__svg .pa-fill .pa-side { fill:#202d4b; }
+.protocol-art__svg .pa-fill .pa-pin { fill:#e2d9fb; }
+.protocol-art__svg .pa-fill :is(.pa-detail,.pa-bevel,.pa-seam) { stroke:#899ac3; }

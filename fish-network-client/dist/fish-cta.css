@@ -1,0 +1,116 @@
+/* Universal Fish Network CTA treatment, matched to the homepage navigation action. */
+.fish-cta.fish-cta {
+  --button-bg: #e6e1d9;
+  --button-bg-hover: #e6e1d9;
+  --button-fg: #080b13;
+  z-index: 0;
+  position: relative;
+  overflow: clip;
+  isolation: isolate;
+  border-color: #e6e1d9;
+  border-radius: 9999px;
+  background: #e6e1d9;
+  color: #080b13;
+  font-family: var(--fonts-mono);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  user-select: none;
+  white-space: nowrap;
+  box-shadow: none;
+  transition: none;
+}
+
+.fish-cta.fish-cta::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: #fdfcf9;
+  transform: scaleX(0);
+  transform-origin: 100%;
+  transition: transform 300ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .fish-cta.fish-cta:hover {
+    border-color: #e6e1d9;
+    background: #e6e1d9;
+    color: #080b13;
+    transform: none;
+  }
+
+  .fish-cta.fish-cta:hover::before {
+    transform: scaleX(1);
+    transform-origin: 0;
+  }
+}
+
+.fish-cta.fish-cta:focus-visible {
+  outline: 3px solid #9185ff;
+  outline-offset: 3px;
+}
+
+/* The homepage uses one optical size; inner-route layout variants remain unchanged. */
+main.fish-hero-mounted .fish-cta.fish-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: fit-content;
+  min-height: 44px;
+  padding: 0 22px;
+  border: 1px solid #e6e1d9;
+  font-size: 11px;
+  line-height: 1;
+}
+
+main.fish-hero-mounted .fish-cta.fish-cta--secondary {
+  border-color: rgb(243 240 232 / 34%);
+  background: transparent;
+  color: #f3f0e8;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+
+main.fish-hero-mounted .fish-cta.fish-cta--secondary::before {
+  background: #fdfcf9;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  main.fish-hero-mounted .fish-cta.fish-cta--secondary:hover {
+    border-color: #fdfcf9;
+    background: transparent;
+    color: #080b13;
+  }
+}
+
+main.fish-hero-mounted .fish-cta.fish-cta:active {
+  transform: translate3d(0, 1px, 0);
+}
+
+/* Existing component classes continue to own dimensions and responsive layout. */
+.fish-paths .fish-cta {
+  min-height: 42px;
+  padding: 0 18px;
+  border: 1px solid #e6e1d9;
+}
+
+.fish-closing__secondary.fish-cta {
+  min-height: 48px;
+  padding: 0 22px;
+  border: 1px solid #e6e1d9;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fish-cta.fish-cta::before {
+    transition: none;
+  }
+
+  main.fish-hero-mounted .fish-cta.fish-cta--secondary {
+    transition: color 0.01ms linear, border-color 0.01ms linear;
+  }
+}

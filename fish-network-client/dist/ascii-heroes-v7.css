@@ -1,0 +1,24 @@
+/* Shared homepage ASCII artwork, with original page copy and controls intact. */
+.fish-copy-v2.fish-copy-v2 .fn-ascii-hero {
+  position:relative; isolation:isolate; overflow:clip; background:#080b13;
+}
+.fn-ascii-hero__canvas,.fn-ascii-hero__wash {
+  position:absolute; inset:0; width:100%; height:100%; pointer-events:none;
+}
+.fn-ascii-hero__canvas { z-index:-2; display:block; opacity:.94; }
+.fn-ascii-hero__wash {
+  z-index:-1;
+  background:linear-gradient(90deg,rgb(8 11 19 / 98%) 0%,rgb(8 11 19 / 89%) 39%,rgb(8 11 19 / 42%) 77%,rgb(8 11 19 / 58%) 100%),linear-gradient(180deg,rgb(8 11 19 / 18%) 0%,rgb(8 11 19 / 12%) 63%,rgb(8 11 19 / 4%) 100%);
+}
+.fish-copy-v2.fish-copy-v2 .fn-ascii-hero > .school-shell {
+  position:relative; display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
+  min-height:min(800px,calc(100svh - 64px)); padding-block:72px; gap:0;
+}
+.fish-copy-v2.fish-copy-v2 .fn-ascii-hero :is(.school-hero__copy,.protocol-hero__copy,.route-hero__copy) { width:62%; max-width:760px; }
+.fish-copy-v2.fish-copy-v2 .fn-ascii-hero.resources-hero .school-shell > * { max-width:760px; width:62%; }
+.fn-ascii-hero.fish-koi-fallback .fn-ascii-hero__canvas { background:url('/media/fish-koi-ascii-poster.webp') center/cover no-repeat; }
+@media(max-width:899px) {
+  .fish-copy-v2.fish-copy-v2 .fn-ascii-hero > .school-shell { min-height:0; padding-block:56px; }
+  .fish-copy-v2.fish-copy-v2 .fn-ascii-hero :is(.school-hero__copy,.protocol-hero__copy,.route-hero__copy),
+  .fish-copy-v2.fish-copy-v2 .fn-ascii-hero.resources-hero .school-shell > * { width:100%; }
+}

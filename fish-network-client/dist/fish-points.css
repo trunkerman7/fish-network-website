@@ -1,0 +1,86 @@
+/* Fish Points visual treatment. Homepage geometry is owned by fish-homepage-redesign.css. */
+.fish-points-intro {
+  margin-bottom: clamp(48px, 5vw, 72px);
+}
+
+.fish-points-intro__eyebrow {
+  margin: 0 0 28px;
+  color: rgb(192 200 255 / 82%);
+  font-family: var(--fonts-mono);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.fish-points-intro .solutions_heading__h49lL {
+  margin: 0;
+  text-wrap: balance;
+}
+
+.solutions_visual__vaKPZ {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-left: 1px solid rgb(243 240 232 / 14%);
+  background:
+    radial-gradient(ellipse 70% 58% at 52% 42%, rgb(112 92 255 / 16%), transparent 68%),
+    radial-gradient(ellipse 62% 48% at 76% 78%, rgb(80 102 159 / 13%), transparent 72%),
+    linear-gradient(180deg, #0c111d 0%, #090d16 100%);
+}
+
+.solution-visual_root__lsTUx,
+.solution-visual_layerUi__ryQ8H,
+.solution-visual_layerApi__E3mgi {
+  background: transparent;
+}
+
+.solution-visual_root__lsTUx {
+  transition: opacity 320ms cubic-bezier(.23, 1, .32, 1);
+}
+
+.solution-visual_layerUi__ryQ8H::before,
+.solution-visual_layerUi__ryQ8H::after {
+  content: none;
+}
+
+.solution-visual_layerUi__ryQ8H .solution-ui_root__3hyG8,
+.solution-visual_layerApi__E3mgi .solution-ui_root__3hyG8 {
+  z-index: 1;
+  width: min(520px, calc(100% - clamp(40px, 8vw, 72px)));
+  border-color: rgb(154 167 220 / 38%);
+  border-radius: 2px;
+  background: linear-gradient(180deg, rgb(15 20 35 / 98%), rgb(8 11 19 / 98%));
+  box-shadow:
+    0 34px 90px rgb(0 0 0 / 40%),
+    0 0 0 1px rgb(112 92 255 / 8%),
+    inset 0 1px 0 rgb(243 240 232 / 5%);
+}
+
+.solutions_visual__vaKPZ .solution-ui_header__eWvnZ > div:nth-child(3) {
+  color: #a89dff !important;
+}
+
+.solution-ui_primary__TSIX_ {
+  border-block: 1px solid rgb(243 240 232 / 8%);
+  background-image: none;
+}
+
+.solution-ui_activity__1kRUf { background-image: none; }
+.solutions_visual__vaKPZ .solution-ui_primary__TSIX_ .solution-ui_primaryValue__ebbYS,
+.solution-ui_activity__1kRUf > span { padding-left: 0; background: transparent; }
+
+@media (max-width: 47.999rem) {
+  .fish-points-intro { margin-bottom: 36px; }
+  .solutions_visual__vaKPZ { border-top: 1px solid rgb(243 240 232 / 14%); border-left: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .solution-visual_root__lsTUx,
+  .solution-visual_layer__1VTS_,
+  .solution-visual_toggleIndicator__eMniH,
+  .solutions_itemBody__9kDJk {
+    transition: none !important;
+  }
+}

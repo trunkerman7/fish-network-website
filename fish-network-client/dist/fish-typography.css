@@ -1,0 +1,251 @@
+/*
+ * Fish Network typography system.
+ *
+ * This file owns type roles across the homepage and every inner route. Page
+ * styles may continue to control measures and spacing, but not the scale,
+ * family, weight, tracking, or leading of equivalent text roles.
+ */
+:root {
+  --fonts-serif: "Cambon", Georgia, "Times New Roman", serif;
+  --fonts-sans: "Sohne", Arial, sans-serif;
+  --fonts-mono: "Sohne Mono", ui-monospace, monospace;
+  --fish-type-display: clamp(3.75rem, 5.2vw, 5.25rem);
+  --fish-type-section: clamp(3rem, 5.25vw, 5.25rem);
+  --fish-type-subsection: clamp(2.125rem, 3.5vw, 3.625rem);
+  --fish-type-card: clamp(1.75rem, 2.6vw, 2.625rem);
+  --fish-type-statement: clamp(1.5rem, 2vw, 2rem);
+  --fish-type-lede: clamp(1.125rem, 1.25vw, 1.25rem);
+  --fish-type-body: 1rem;
+  --fish-type-small: 0.9375rem;
+  --fish-type-label: 0.6875rem;
+  --fish-type-action: 0.75rem;
+  --fish-leading-display: 0.92;
+  --fish-leading-section: 0.95;
+  --fish-leading-subsection: 1;
+  --fish-leading-card: 1.08;
+  --fish-leading-lede: 1.55;
+  --fish-leading-body: 1.65;
+  --fish-tracking-display: -0.046em;
+  --fish-tracking-section: -0.045em;
+  --fish-tracking-subsection: -0.04em;
+  --fish-tracking-label: 0.1em;
+  --fish-tracking-action: 0.06em;
+}
+
+body {
+  font-family: var(--fonts-sans);
+  font-size: var(--fish-type-body);
+  font-weight: 300;
+  line-height: var(--fish-leading-body);
+}
+
+/* Display: one scale for every route hero. */
+:is(
+  .fish-ik-hero h1,
+  .school-hero h1,
+  .route-hero h1,
+  .resources-hero h1,
+  .protocol-hero h1
+) {
+  font-family: var(--fonts-serif);
+  font-size: var(--fish-type-display);
+  font-weight: 300;
+  letter-spacing: var(--fish-tracking-display);
+  line-height: var(--fish-leading-display);
+  text-wrap: balance;
+}
+
+/* Section: primary narrative headings and conversion statements. */
+:is(
+  .fish-infrastructure h2,
+  .fish-trust h2,
+  .fish-neofund h2,
+  .fish-platform__intro h2,
+  .fish-schools-showcase__headline,
+  #fish-points .solutions_heading__h49lL,
+  .fish-closing h2,
+  .school-heading h2,
+  .school-reputation h2,
+  .school-faq h2,
+  .school-inquiry h2,
+  .route-heading h2,
+  .route-feature h2,
+  .route-reputation h2,
+  .route-inquiry h2,
+  .resources-stories__head h2,
+  .resources-close h2,
+  .protocol-sticky h2,
+  .protocol-blocks h2,
+  .protocol-points h2,
+  .protocol-records h2,
+  .protocol-direction h2,
+  .protocol-close h2
+) {
+  font-family: var(--fonts-serif);
+  font-size: var(--fish-type-section);
+  font-weight: 300;
+  letter-spacing: var(--fish-tracking-section);
+  line-height: var(--fish-leading-section);
+  text-wrap: balance;
+}
+
+/* Subsection: the strongest heading inside a section. */
+:is(
+  .fish-infrastructure__step h3,
+  .fish-platform__state h3,
+  .fish-platform__points h3,
+  .fish-school-stage__copy h3,
+  .school-benefit h3,
+  .school-governance__card h3,
+  .school-mandate h3,
+  .school-governance__shared p,
+  .route-card h3,
+  .resource-card h2,
+  .route-feature__signal strong,
+  .protocol-foundation__list h3,
+  .protocol-blocks__cards h3,
+  .protocol-records__grid h3
+) {
+  font-family: var(--fonts-serif);
+  font-size: var(--fish-type-subsection);
+  font-weight: 300;
+  letter-spacing: var(--fish-tracking-subsection);
+  line-height: var(--fish-leading-subsection);
+  text-wrap: balance;
+}
+
+/* Card: compact editorial titles repeated in grids, rails, and stories. */
+:is(
+  .fish-trust__statement,
+  .fish-trust__thesis,
+  .fish-neofund__principle,
+  .fish-schools-showcase__application h3,
+  .school-journey h3,
+  .route-steps h3,
+  .resources-story__title,
+  .protocol-foundation blockquote,
+  .protocol-points__ideas h3
+) {
+  font-family: var(--fonts-serif);
+  font-size: var(--fish-type-card);
+  font-weight: 300;
+  letter-spacing: -0.035em;
+  line-height: var(--fish-leading-card);
+  text-wrap: balance;
+}
+
+/* Leades and section introductions share one readable measure and rhythm. */
+:is(
+  .fish-ik-hero__lead,
+  .school-hero__body,
+  .route-hero__body,
+  .resources-hero__body,
+  .protocol-hero__body,
+  .school-heading > p:last-child,
+  .school-reputation h2 + p,
+  .school-inquiry h2 + p,
+  .route-heading > p:last-child,
+  .route-feature__copy > p:not(.school-eyebrow),
+  .route-reputation p,
+  .route-inquiry p,
+  .protocol-sticky > p:last-child,
+  .protocol-points__intro > div:last-child p,
+  .fish-closing__body
+) {
+  font-family: var(--fonts-sans);
+  font-size: var(--fish-type-lede);
+  font-weight: 300;
+  line-height: var(--fish-leading-lede);
+  text-wrap: pretty;
+}
+
+/* Body copy retains component measures while sharing one size and leading. */
+:is(
+  .fish-infrastructure__body,
+  .fish-infrastructure__follow-up,
+  .fish-infrastructure__step-body,
+  .fish-trust__body,
+  .fish-neofund__copy > p,
+  .fish-platform__intro-grid > p,
+  .fish-platform__layer-body,
+  .fish-schools-showcase__summary p,
+  .fish-school-stage__copy > p:last-child,
+  .school-benefit__intro,
+  .school-governance__description,
+  .school-mandate > p,
+  .route-card > p:last-of-type,
+  .route-steps p,
+  .resource-card > p:not(.school-label),
+  .protocol-foundation__list article p,
+  .protocol-blocks__cards article > p:last-child,
+  .protocol-points__ideas p,
+  .protocol-records__grid article > p:last-child,
+  .protocol-direction article > p:not(.school-eyebrow, .school-label),
+  .school-faq__item [data-faq-panel] p
+) {
+  font-family: var(--fonts-sans);
+  font-size: var(--fish-type-body);
+  font-weight: 300;
+  line-height: var(--fish-leading-body);
+  text-wrap: pretty;
+}
+
+/* Eyebrows, indices, captions, and technical notes use one mono scale. */
+:is(
+  .fish-ik-hero__eyebrow,
+  .fish-infrastructure__eyebrow,
+  .fish-trust__eyebrow,
+  .fish-neofund__eyebrow,
+  .fish-platform__eyebrow,
+  .fish-platform__layer-label,
+  .fish-schools-showcase__eyebrow,
+  .fish-schools-showcase__applications-label,
+  .fish-closing__eyebrow,
+  .school-eyebrow,
+  .school-label,
+  .school-caption,
+  .route-note,
+  .route-boundary,
+  .protocol-qualification,
+  .protocol-records__support
+) {
+  font-family: var(--fonts-mono);
+  font-size: var(--fish-type-label);
+  font-weight: 400;
+  letter-spacing: var(--fish-tracking-label);
+  line-height: 1.55;
+  text-transform: uppercase;
+}
+
+/* Shared actions and desktop navigation resolve to the same mono role. */
+:is(
+  .fish-cta,
+  .fish-site-header__links > li > a,
+  .fish-site-header__links > li > button,
+  .fish-site-header__cta,
+  [class*="_top-level-item_"]
+) {
+  font-family: var(--fonts-mono);
+  font-size: var(--fish-type-action);
+  font-weight: 400;
+  letter-spacing: var(--fish-tracking-action);
+  line-height: 1;
+}
+
+@media (max-width: 56.1875rem) {
+  :root {
+    --fish-type-display: clamp(2.875rem, 11vw, 4rem);
+    --fish-type-section: clamp(3rem, 12vw, 4.125rem);
+    --fish-type-subsection: clamp(2rem, 8vw, 2.75rem);
+    --fish-type-card: clamp(1.625rem, 7vw, 2.25rem);
+    --fish-type-lede: 1.0625rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  :root {
+    --fish-type-display: clamp(2.75rem, 11.5vw, 3.5rem);
+    --fish-type-section: clamp(2.75rem, 12vw, 3.5rem);
+    --fish-type-subsection: clamp(1.875rem, 8vw, 2.25rem);
+  }
+}

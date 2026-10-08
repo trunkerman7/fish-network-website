@@ -1,0 +1,125 @@
+/* Canonical live copy roles, loaded after the preserved component styles.
+   Scope excludes illustration/SVG labels and never changes animation rules.
+   The repeated scope class intentionally outranks legacy component rules. */
+.fish-copy-v2 {
+  --fn-display: clamp(2.5rem, 4.5vw, 4rem);
+  --fn-section: clamp(2.125rem, 3.5vw, 3rem);
+  --fn-feature: clamp(1.75rem, 2.5vw, 2.25rem);
+  --fn-card: clamp(1.5rem, 2vw, 1.75rem);
+  --fn-body: 1.0625rem;
+  --fn-lead: 1.125rem;
+  --fn-support: .9375rem;
+  --fn-small: .875rem;
+  --fn-label: .75rem;
+  /* Legacy section selectors include an ID in :is(); keep their tokens aligned. */
+  --fish-type-section: var(--fn-section);
+  --fish-leading-section: 1.12;
+  --fish-tracking-section: -.03em;
+}
+.fish-copy-v2.fish-copy-v2 main :is(h1,h2,h3) {
+  font-family: var(--fonts-serif);
+  font-weight: 300;
+  text-wrap: balance;
+  letter-spacing: -.035em;
+}
+.fish-copy-v2.fish-copy-v2 main h1 {
+  font-size: var(--fn-display);
+  line-height: 1.08;
+  max-width: 19ch;
+}
+.fish-copy-v2.fish-copy-v2 main h2,
+.fish-copy-v2 #fish-points h2 {
+  font-size: var(--fn-section);
+  line-height: 1.12;
+  letter-spacing: -.03em;
+  max-width: 24ch;
+}
+.fish-copy-v2.fish-copy-v2 main h3 {
+  font-size: var(--fn-card);
+  line-height: 1.2;
+  letter-spacing: -.025em;
+}
+.fish-copy-v2.fish-copy-v2 main :is(.fish-platform__state,.fish-school-stage__copy) h3 {
+  font-size: var(--fn-feature);
+  line-height: 1.15;
+}
+.fish-copy-v2.fish-copy-v2 main p {
+  font-family: var(--fonts-sans);
+  font-size: var(--fn-body);
+  font-weight: 300;
+  letter-spacing: normal;
+  line-height: 1.6;
+  text-transform: none;
+  text-wrap: pretty;
+}
+.fish-copy-v2.fish-copy-v2 main :is(.fish-ik-hero__lead,.school-hero__body,.route-hero__body,.resources-hero__body,.protocol-hero__body) {
+  font-size: var(--fn-lead);
+  line-height: 1.55;
+}
+.fish-copy-v2.fish-copy-v2 main :is(.fish-ik-hero__support,.school-hero__support,.route-hero__support,.protocol-hero__support,.v2-home-note,.route-note,.route-boundary,.v2-qualification) {
+  font-family: var(--fonts-sans);
+  font-size: var(--fn-support);
+  letter-spacing: normal;
+  line-height: 1.6;
+  text-transform: none;
+}
+.fish-copy-v2.fish-copy-v2 main :is(.fish-ik-hero__eyebrow,.fish-infrastructure__eyebrow,.fish-platform__eyebrow,.fish-platform__layer-label,.fish-schools-showcase__eyebrow,.fish-neofund__eyebrow,.fish-closing__eyebrow,.school-eyebrow,.school-label,.school-caption,.fish-school-stage__counter) {
+  font-family: var(--fonts-mono);
+  font-size: var(--fn-label);
+  font-weight: 400;
+  letter-spacing: .08em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.fish-copy-v2.fish-copy-v2 main :is(.v2-stage-labels,.route-status,.school-hero__status,.protocol-hero__status) {
+  font-family: var(--fonts-mono);
+  font-size: var(--fn-label);
+  line-height: 1.6;
+  letter-spacing: .04em;
+}
+.fish-copy-v2.fish-copy-v2 main :is(.fish-cta,.school-button) {
+  font-family: var(--fonts-mono);
+  font-size: var(--fn-small);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: .025em;
+  white-space: normal;
+  text-align: center;
+  max-width: 100%;
+  padding-block: .875rem;
+}
+.fish-copy-v2.fish-copy-v2 main :is(.fish-platform__tabs button,.fish-school-stages__tabs button) {
+  font-size: var(--fn-small);
+  line-height: 1.45;
+  letter-spacing: .025em;
+}
+.fish-copy-v2.fish-copy-v2 main .fish-school-stages__tabs button :is(span,strong) {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  font-size: inherit;
+}
+.fish-copy-v2.fish-copy-v2 main .fish-school-stages__tabs button { min-height: 6rem; height:auto; }
+.fish-copy-v2.fish-copy-v2 main :is(.school-faq__item h3,.school-faq__item button) {
+  font-family: var(--fonts-sans);
+  font-size: var(--fn-body);
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: normal;
+}
+.fish-copy-v2.fish-copy-v2 main :is(.school-inquiry__form label,.school-inquiry__form small,.school-inquiry__notice,.school-form__status,.school-inquiry__preview,.route-feature small) {
+  font-family: var(--fonts-sans);
+  font-size: var(--fn-small);
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-transform: none;
+}
+.fish-copy-v2.fish-copy-v2 main :is(input,select,textarea) { font-family:var(--fonts-sans); font-size:1rem; line-height:1.5; }
+.fish-copy-v2.fish-copy-v2 main .route-feature__signal strong { font-size:var(--fn-card); line-height:1.4; }
+.fish-copy-v2 .fish-site-footer__identity p:first-of-type { font-size:1.5rem; line-height:1.25; }
+.fish-copy-v2 .fish-site-footer__identity p + p { font-family:var(--fonts-sans); font-size:var(--fn-body); line-height:1.6; letter-spacing:normal; }
+.fish-copy-v2 .fish-site-footer :is(a,.fish-site-footer__signature) { font-size:var(--fn-label); line-height:1.5; }
+@media(max-width:37.5rem) {
+  .fish-copy-v2 { --fn-body:1rem; --fn-lead:1.0625rem; }
+  .fish-copy-v2.fish-copy-v2 main h2 { max-width:100%; }
+}

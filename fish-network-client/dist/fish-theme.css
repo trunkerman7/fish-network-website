@@ -1,0 +1,52 @@
+/* Fish Network palette bridge, preserving Griffin structure and motion. */
+.themeMarketing {
+  --fish-ocean-deep: oklch(11.5% 0.025 255);
+  --color-bg-surface-base: var(--fish-ocean-deep);
+  --color-stone-1100: var(--fish-ocean-deep);
+}
+
+/* Replace Griffin's three responsive logo instances without disturbing layout. */
+.site-header_logo__XuQSC > svg,
+.mobile-nav_logo__mq3uF > svg,
+.SiteFooter_legalLink__OM0pj > svg {
+  display: none;
+}
+
+.site-header_logo__XuQSC::after,
+.mobile-nav_logo__mq3uF::after,
+.SiteFooter_legalLink__OM0pj::after {
+  content: "";
+  display: block;
+  width: 133.33px;
+  height: 28px;
+  background: url("fish-network-logo.svg") center / contain no-repeat;
+}
+
+.SiteFooter_legalLink__OM0pj::after {
+  width: 152.38px;
+  height: 32px;
+}
+
+@media (min-width: 48em) {
+  .site-header_logo__XuQSC::after,
+  .mobile-nav_logo__mq3uF::after {
+    width: 152.38px;
+    height: 32px;
+  }
+}
+
+/* The opening Motes field is fixed; keep Griffin's original static header above
+   it without turning the header itself into a fixed or custom navigation bar. */
+.site-header_container__o1NwY {
+  position: relative;
+  z-index: 20;
+}
+
+/* At rest Griffin's three header regions share one full-width surface. The
+   centered navigation keeps its own matching fill once this outer row scrolls
+   away. */
+header.LayoutContainer_root__kCemV {
+  position: relative;
+  z-index: 20;
+  background-color: #080b13;
+}

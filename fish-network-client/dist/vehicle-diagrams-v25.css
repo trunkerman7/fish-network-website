@@ -1,0 +1,17 @@
+.iv-diagram { display:block; width:100%; height:auto; overflow:visible; }
+.iv-top { fill:#111827; stroke:#9aa7bd; stroke-width:.95; stroke-linejoin:round; }
+.iv-side { fill:#0a101c; stroke:#697892; stroke-width:.85; stroke-linejoin:round; }
+.iv-bevel,.iv-seam { fill:none; stroke:#4e607c; stroke-width:.65; }
+.iv-detail { fill:none; stroke:#7e91af; stroke-width:.75; }
+.iv-contact { fill:none; stroke:#a2b3cf; stroke-width:.9; }
+.iv-cell { fill:#202d49; stroke:#93a8c6; stroke-width:.7; }
+.iv-pin { fill:#b6c6e0; }
+.iv-wire { fill:none; stroke:#7b90b6; stroke-width:1; }
+.iv-boundary { fill:none; stroke:#b5bde9; stroke-width:1; stroke-dasharray:4 3; }
+.iv-labels path { fill:none; stroke:#7689ac; stroke-width:.8; }
+.iv-labels text { fill:#afbedb; font:17px var(--fonts-mono); }
+.sc-vehicle { width:100%; max-width:690px; margin-inline:auto; }
+.sc-vehicle [data-vehicle-part] { pointer-events:bounding-box; }
+.sc-vehicle [data-vehicle-part].is-inspected .iv-top { stroke:#e4dfff; }
+.sc-vehicle [data-vehicle-part].is-inspected .iv-cell { fill:#39456e; }
+@media(max-width:600px) { .iv-labels { display:none; } .sc-vehicle { width:calc(100% + 32px); margin-left:-16px; } }

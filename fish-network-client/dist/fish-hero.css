@@ -1,0 +1,254 @@
+/* Fish Network opening sequence. Kept separate from Griffin's generated CSS. */
+main.Layout_main__gbdP0.fish-hero-mounted > .hero_root__5fdox,
+main.Layout_main__gbdP0.fish-hero-mounted > .hero_root__5fdox + section.LayoutContainer_root__kCemV {
+  display: none !important;
+}
+
+.fish-ik-hero {
+  --fish-hero-bg: #080b13;
+  --fish-hero-rule: rgb(243 240 232 / 14%);
+  --fish-hero-rule-soft: rgb(243 240 232 / 9%);
+  --fish-hero-muted: rgb(243 240 232 / 62%);
+  --fish-hero-dim: rgb(243 240 232 / 42%);
+  --fish-hero-ease: cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+  color: var(--color-stone-100);
+  background: var(--fish-hero-bg);
+  overflow: clip;
+}
+
+.fish-ik-hero,
+.fish-ik-hero *,
+.fish-ik-hero *::before,
+.fish-ik-hero *::after {
+  box-sizing: border-box;
+}
+
+.fish-ik-hero__visual {
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+  background: radial-gradient(circle at 72% 28%, rgb(59 64 255 / 12%), transparent 34%), var(--fish-hero-bg);
+}
+
+.fish-ik-hero__motes,
+.fish-ik-hero__koi,
+.fish-ik-hero__wash {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.fish-ik-hero__motes {
+  z-index: -3;
+  display: block;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.fish-ik-hero__koi {
+  z-index: -3;
+  display: block;
+  pointer-events: none;
+  opacity: 0.94;
+}
+
+.fish-ik-hero__wash {
+  z-index: -2;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgb(8 11 19 / 98%) 0%, rgb(8 11 19 / 89%) 39%, rgb(8 11 19 / 42%) 77%, rgb(8 11 19 / 58%) 100%),
+    linear-gradient(180deg, rgb(8 11 19 / 18%) 0%, rgb(8 11 19 / 12%) 63%, rgb(8 11 19 / 4%) 100%);
+}
+
+.fish-ik-hero__frame {
+  width: calc(100% - (var(--layout-container-padding) * 2));
+  max-width: var(--layout-container-size);
+  margin-inline: auto;
+}
+
+.fish-ik-hero__stage {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  min-height: calc(100svh - var(--header-height));
+}
+
+.fish-ik-hero__content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.46fr);
+  gap: clamp(44px, 6vw, 96px);
+  align-items: center;
+  width: 100%;
+  padding: clamp(88px, 7vw, 102px) var(--layout-content-padding) clamp(104px, 12vh, 148px);
+}
+
+.fish-ik-hero__eyebrow {
+  font-family: var(--fonts-mono);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.11em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.fish-ik-hero__eyebrow {
+  margin: 0 0 28px;
+  color: rgb(192 200 255 / 78%);
+}
+
+.fish-ik-hero h1 {
+  max-width: 970px;
+  margin: 0;
+  font-family: var(--fonts-serif);
+  font-size: clamp(68px, 6.5vw, 96px);
+  font-weight: 300;
+  letter-spacing: -0.046em;
+  line-height: 0.93;
+  text-wrap: balance;
+}
+
+.fish-ik-hero h1 span {
+  display: block;
+  white-space: nowrap;
+}
+
+.fish-ik-hero__lead {
+  max-width: 650px;
+  margin: 30px 0 0;
+  color: var(--fish-hero-muted);
+  font-family: var(--fonts-sans);
+  font-size: clamp(17px, 1.35vw, 20px);
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.fish-ik-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.fish-ik-hero__button {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 0 20px;
+  border: 1px solid var(--fish-hero-rule);
+  border-radius: 999px;
+  color: var(--color-stone-100);
+  font-family: var(--fonts-mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, transform 260ms var(--fish-hero-ease);
+}
+
+.fish-ik-hero__button--primary {
+  border-color: var(--color-stone-200);
+  background: var(--color-stone-200);
+  color: var(--fish-hero-bg);
+}
+
+@media (hover: hover) {
+  .fish-ik-hero__button:hover {
+    border-color: var(--color-stone-100);
+    transform: translateY(-2px);
+  }
+
+  .fish-ik-hero__button--secondary:hover {
+    background: rgb(243 240 232 / 8%);
+  }
+}
+
+.fish-ik-hero__button:focus-visible {
+  outline: 3px solid rgb(192 200 255 / 62%);
+  outline-offset: 3px;
+}
+
+.fish-ik-hero__anchor {
+  position: absolute;
+  bottom: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fish-ik-hero__eyebrow,
+  .fish-ik-hero h1,
+  .fish-ik-hero__lead,
+  .fish-ik-hero__actions {
+    animation: fish-hero-enter 760ms var(--fish-hero-ease) both;
+  }
+
+  .fish-ik-hero h1 { animation-delay: 70ms; }
+  .fish-ik-hero__lead { animation-delay: 130ms; }
+  .fish-ik-hero__actions { animation-delay: 190ms; }
+}
+
+@keyframes fish-hero-enter {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 64rem) {
+  .fish-ik-hero__content {
+    grid-template-columns: 1fr;
+    gap: 44px;
+    padding-top: 75px;
+  }
+
+}
+
+@media (max-width: 40rem) {
+  .fish-ik-hero__stage {
+    min-height: 820px;
+  }
+
+  .fish-ik-hero__content {
+    gap: 32px;
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+
+  .fish-ik-hero h1 {
+    font-size: clamp(55px, 16vw, 76px);
+    line-height: 0.94;
+  }
+
+  .fish-ik-hero h1 span {
+    white-space: normal;
+  }
+
+  .fish-ik-hero__lead {
+    max-width: 34ch;
+  }
+
+  .fish-ik-hero__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .fish-ik-hero__button {
+    width: 100%;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fish-ik-hero *,
+  .fish-ik-hero *::before,
+  .fish-ik-hero *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

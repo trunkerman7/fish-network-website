@@ -1,0 +1,128 @@
+/* Composition only: existing copy, type scale, figures, colors, and motion stay intact.
+   Remove this final layer to recover the previous spacing. */
+.fish-copy-v2 {
+  --composition-gutter: clamp(22px, 4.167vw, 60px);
+  --composition-section: clamp(72px, 7.2vw, 104px);
+  --composition-gap: clamp(32px, 4.4vw, 64px);
+}
+.fish-copy-v2 main.Layout_main__gbdP0.fish-hero-mounted {
+  --fish-home-frame: 1440px;
+  --fish-home-gutter: var(--composition-gutter);
+  --fish-home-section: var(--composition-section);
+  --fish-home-intro-gap: 48px;
+  --fish-home-content-gap: 48px;
+}
+.fish-copy-v2.fish-copy-v2 .school-shell {
+  width: calc(100% - var(--composition-gutter) * 2);
+  max-width: 1320px;
+  margin-inline: auto;
+  padding-inline: 0;
+}
+/* Shared introductions: one eyebrow, then aligned headline and explanation. */
+.fish-copy-v2.fish-copy-v2 :is(.school-heading,.route-heading) {
+  grid-template-columns: minmax(0,1.08fr) minmax(0,.92fr);
+  gap: 24px var(--composition-gap);
+  align-items: start;
+  margin-bottom: 44px;
+}
+.fish-copy-v2.fish-copy-v2 :is(.school-heading,.route-heading) > .school-eyebrow { margin:0; grid-column:1/-1; }
+.fish-copy-v2.fish-copy-v2 :is(.school-heading,.route-heading):not(:has(.composition-heading-copy)) h2 { grid-column:1/-1; }
+.fish-copy-v2 .composition-heading-copy { min-width:0; max-width:62ch; }
+.fish-copy-v2.fish-copy-v2 .composition-heading-copy p { margin:0; }
+.fish-copy-v2.fish-copy-v2 .composition-heading-copy p + p { margin-top:20px; }
+.fish-copy-v2.fish-copy-v2 :is(.fish-infrastructure__intro-grid,.fish-platform__intro-grid,.fish-schools-showcase__intro,.fish-neofund__statement) {
+  align-items: start;
+  gap: var(--composition-gap);
+}
+.fish-copy-v2.fish-copy-v2 .fish-infrastructure__intro-copy { align-self:start; padding-bottom:0; }
+.fish-copy-v2.fish-copy-v2 :is(.fish-platform__intro,.v2-problem .fish-infrastructure__intro) { padding:0; margin:0 0 44px; }
+.fish-copy-v2.fish-copy-v2 .v2-problem .fish-infrastructure__frame { padding-block:var(--composition-section); }
+.fish-copy-v2.fish-copy-v2 .v2-problem .fish-infrastructure__eyebrow { margin-bottom:24px; }
+.fish-copy-v2.fish-copy-v2 .fish-platform__intro-grid > :is(p,div) { max-width:62ch; margin:0; }
+.fish-copy-v2.fish-copy-v2 .v2-home-body { margin:0; }
+.fish-copy-v2.fish-copy-v2 .v2-home-body + .v2-home-body { margin-top:20px; }
+.fish-copy-v2.fish-copy-v2 .v2-home-note { margin:24px 0 0; }
+/* Preserve breathing room between sections, remove empty space inside them. */
+.fish-copy-v2.fish-copy-v2 :is(.school-section,.route-section,.resources-close,.school-inquiry) { padding-block:var(--composition-section); }
+.fish-copy-v2.fish-copy-v2 :is(.route-card,.school-mandate,.route-steps li) { min-height:0; padding:32px; }
+.fish-copy-v2.fish-copy-v2 :is(.route-card,.school-mandate,.route-steps li) > .school-label { margin:0 0 20px; }
+.fish-copy-v2.fish-copy-v2 :is(.route-card,.school-mandate,.route-steps li) h3 { margin:0; }
+.fish-copy-v2.fish-copy-v2 :is(.route-card,.school-mandate,.route-steps li) > p:last-child { margin:16px 0 0; }
+.fish-copy-v2.fish-copy-v2 :is(.route-note,.school-caption) { margin:24px 0 0; max-width:74ch; }
+.fish-copy-v2.fish-copy-v2 .resource-card { min-height:0; padding:36px; }
+.fish-copy-v2.fish-copy-v2 .resource-card .school-label { margin:0; }
+.fish-copy-v2.fish-copy-v2 .resource-card h3 { margin:24px 0 16px; }
+.fish-copy-v2.fish-copy-v2 .resource-card > span { margin-top:auto; padding-top:28px; }
+.fish-copy-v2.fish-copy-v2 .v2-paths { margin-top:40px; }
+.fish-copy-v2.fish-copy-v2 .v2-paths article { display:flex; flex-direction:column; align-items:flex-start; }
+.fish-copy-v2.fish-copy-v2 .v2-paths p { margin:0 0 24px; }
+.fish-copy-v2.fish-copy-v2 .v2-paths .fish-cta { margin-top:auto; }
+.fish-copy-v2.fish-copy-v2 .v2-evidence-timeline .fish-platform__eyebrow { margin-bottom:20px; }
+.fish-copy-v2.fish-copy-v2 .v2-evidence-timeline h3 { margin-bottom:16px; }
+.fish-copy-v2.fish-copy-v2 .v2-evidence-timeline p { margin:0; }
+/* Match the retained diagrams to their immediate explanation. */
+.fish-copy-v2.fish-copy-v2 .v2-platform-panels { padding:36px 48px 36px 0; }
+.fish-copy-v2.fish-copy-v2 .v2-platform-figure { grid-row:auto; min-height:0; padding:24px; }
+.fish-copy-v2.fish-copy-v2 .v2-platform-figure .fish-infrastructure__figure { height:auto; overflow:visible; }
+.fish-copy-v2.fish-copy-v2 .v2-platform-figure .fish-infrastructure__system { width:min(100%,300px); }
+.fish-copy-v2.fish-copy-v2 .fish-platform__system { padding-bottom:28px; }
+.fish-copy-v2.fish-copy-v2 .v2-stage-labels { margin-top:20px; }
+.fish-copy-v2.fish-copy-v2 .fish-schools-showcase__inner { gap:0; }
+.fish-copy-v2.fish-copy-v2 .fish-schools-showcase__eyebrow { margin:0 0 24px; }
+.fish-copy-v2.fish-copy-v2 :is(.fish-schools-showcase__headline-wrap,.fish-schools-showcase__summary) { padding:0; }
+.fish-copy-v2.fish-copy-v2 .fish-schools-showcase__summary { gap:20px; }
+.fish-copy-v2.fish-copy-v2 .fish-schools-showcase__summary p { max-width:62ch; }
+.fish-copy-v2.fish-copy-v2 .fish-schools-showcase__summary .school-actions { margin-top:8px; }
+.fish-copy-v2.fish-copy-v2 .fish-schools-showcase__rule { height:0; margin:0; }
+.fish-copy-v2.fish-copy-v2 .fish-school-stages { margin-top:44px; }
+.fish-copy-v2.fish-copy-v2 main .fish-school-stages__tabs button { min-height:80px; }
+.fish-copy-v2.fish-copy-v2 .fish-school-stage { min-height:440px; }
+.fish-copy-v2.fish-copy-v2 .fish-school-stage__copy { padding-block:36px; }
+.fish-copy-v2.fish-copy-v2 .fish-school-stage__counter { margin-bottom:20px; }
+.fish-copy-v2.fish-copy-v2 .fish-school-stage__copy h3 { max-width:19ch; }
+.fish-copy-v2.fish-copy-v2 .fish-school-stage__figure { min-height:0; }
+.fish-copy-v2.fish-copy-v2 .composition-components { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:40px; align-items:center; }
+.fish-copy-v2.fish-copy-v2 .composition-components .route-cards { grid-template-columns:1fr; border-bottom:0; }
+.fish-copy-v2.fish-copy-v2 .composition-components .route-card { padding:24px 0; border:0; border-bottom:1px solid var(--school-rule); }
+.fish-copy-v2.fish-copy-v2 .composition-components .school-label { margin-bottom:12px; }
+.fish-copy-v2.fish-copy-v2 .composition-components figure { margin:0; min-width:0; }
+/* Inner-page heroes and conversions retain their compositions without viewport padding debt. */
+.fish-copy-v2.fish-copy-v2 :is(.school-hero,.route-hero,.protocol-hero) { min-height:0; }
+.fish-copy-v2.fish-copy-v2 :is(.school-hero__inner,.route-hero__inner,.protocol-hero__inner) { min-height:min(800px,calc(100svh - 64px)); padding-block:72px; gap:var(--composition-gap); }
+.fish-copy-v2.fish-copy-v2 :is(.resources-hero,.resources-hero__inner) { min-height:560px; }
+.fish-copy-v2.fish-copy-v2 .resources-hero__inner { padding-block:72px; }
+.fish-copy-v2.fish-copy-v2 :is(.school-inquiry__layout,.route-inquiry__inner,.school-faq__grid) { gap:var(--composition-gap); align-items:start; }
+.fish-copy-v2.fish-copy-v2 .route-inquiry__inner { min-height:0; padding-block:var(--composition-section); }
+.fish-copy-v2.fish-copy-v2 .route-feature { gap:var(--composition-gap); align-items:center; }
+.fish-copy-v2.fish-copy-v2 .route-feature__signal { min-height:300px; padding:24px; }
+@media(max-width:1000px) {
+  .fish-copy-v2.fish-copy-v2 .v2-four-steps li:nth-child(n+3) { border-top:1px solid var(--school-rule); }
+  .fish-copy-v2.fish-copy-v2 .v2-four-steps li:nth-child(odd) { border-left:0; }
+}
+@media(max-width:899px) {
+  .fish-copy-v2 { --composition-section:64px; --composition-gap:28px; }
+  .fish-copy-v2.fish-copy-v2 :is(.school-heading,.route-heading,.fish-infrastructure__intro-grid,.fish-platform__intro-grid,.fish-schools-showcase__intro,.fish-neofund__statement,.composition-components,.fish-school-stage) { grid-template-columns:1fr; }
+  .fish-copy-v2.fish-copy-v2 :is(.school-heading,.route-heading) { gap:24px; margin-bottom:32px; }
+  .fish-copy-v2.fish-copy-v2 :is(.school-hero__inner,.route-hero__inner,.protocol-hero__inner) { min-height:0; padding-block:56px; }
+  .fish-copy-v2.fish-copy-v2 :is(.resources-hero,.resources-hero__inner) { min-height:0; }
+  .fish-copy-v2.fish-copy-v2 .resources-hero__inner { padding-block:64px; }
+  .fish-copy-v2.fish-copy-v2 .v2-platform-panels { grid-row:1; padding:28px 0; border:0; }
+  .fish-copy-v2.fish-copy-v2 .v2-platform-figure { grid-row:2; padding:24px 0; border-top:1px solid var(--fish-home-rule); }
+  .fish-copy-v2.fish-copy-v2 .v2-platform-figure .fish-infrastructure__system { width:min(100%,260px); }
+  .fish-copy-v2.fish-copy-v2 .fish-school-stage { min-height:0; }
+  .fish-copy-v2.fish-copy-v2 .fish-school-stage__copy { padding:28px 0; border-right:0; border-bottom:1px solid var(--fish-home-rule); }
+  .fish-copy-v2.fish-copy-v2 .fish-school-stage__figure { min-height:280px; }
+  .fish-copy-v2.fish-copy-v2 .fish-school-stage__figure::after { bottom:12px; }
+  .fish-copy-v2.fish-copy-v2 :is(.fish-platform__intro,.v2-problem .fish-infrastructure__intro) { margin-bottom:32px; }
+  .fish-copy-v2.fish-copy-v2 .fish-school-stages { margin-top:32px; }
+  .fish-copy-v2.fish-copy-v2 .fish-school-stages__tabs button:nth-child(n+4) { border-top:1px solid var(--fish-home-rule); }
+  .fish-copy-v2.fish-copy-v2 .v2-evidence-timeline li:nth-child(2n) { border-right:0; }
+  .fish-copy-v2.fish-copy-v2 .route-feature__signal { min-height:220px; }
+}
+@media(max-width:600px) {
+  .fish-copy-v2.fish-copy-v2 :is(.route-card,.school-mandate,.route-steps li) { padding:24px 0; border-left:0; }
+  .fish-copy-v2.fish-copy-v2 .route-steps li + li { border-top:1px solid var(--school-rule); }
+  .fish-copy-v2.fish-copy-v2 .resource-card { padding:28px 22px; }
+  .fish-copy-v2.fish-copy-v2 .v2-evidence-timeline li { padding:24px 0; }
+  .fish-copy-v2.fish-copy-v2 .school-actions { gap:12px; }
+}

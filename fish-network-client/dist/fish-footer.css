@@ -1,0 +1,211 @@
+/* Source-owned Fish footer. Griffin's generated footer remains untouched and hidden. */
+html.fish-footer-ready .SiteFooter_root__BD3l3 {
+  display: none !important;
+}
+
+.fish-site-footer {
+  --fish-footer-blue: #080b13;
+  --fish-footer-cream: #f3f0e8;
+  --fish-footer-rule: rgb(243 240 232 / 28%);
+  --fish-footer-muted: rgb(243 240 232 / 72%);
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+  min-height: clamp(442px, 46.8svh, 533px);
+  overflow: clip;
+  border-top: 1px solid var(--fish-footer-rule);
+  background: var(--fish-footer-blue);
+  color: var(--fish-footer-cream);
+}
+
+.fish-site-footer,
+.fish-site-footer *,
+.fish-site-footer *::before,
+.fish-site-footer *::after {
+  box-sizing: border-box;
+}
+
+.fish-site-footer__grain,
+.fish-site-footer__ocean,
+.fish-site-footer__wash {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.fish-site-footer__grain {
+  z-index: -3;
+  opacity: 0.18;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.86' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.34'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  mix-blend-mode: soft-light;
+}
+
+.fish-site-footer__ocean {
+  z-index: -2;
+  display: block;
+  opacity: 0.9;
+}
+
+.fish-site-footer__wash {
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgb(8 11 19 / 98%) 0%, rgb(8 11 19 / 78%) 24%, rgb(8 11 19 / 22%) 58%, rgb(8 11 19 / 0%) 100%),
+    linear-gradient(90deg, rgb(8 11 19 / 26%), transparent 42%, rgb(98 76 212 / 9%));
+}
+
+.fish-site-footer__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - (var(--layout-container-padding) * 2));
+  max-width: var(--layout-container-size);
+  min-height: inherit;
+  margin-inline: auto;
+  padding: clamp(68px, 8vw, 104px) var(--layout-content-padding) 34px;
+}
+
+.fish-site-footer__top {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.72fr) minmax(560px, 1.28fr);
+  gap: clamp(56px, 9vw, 144px);
+  align-items: start;
+}
+
+.fish-site-footer__logo {
+  display: inline-block;
+  width: min(200px, 100%);
+  color: inherit;
+  text-decoration: none;
+}
+
+.fish-site-footer__logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.fish-site-footer__identity p {
+  max-width: 290px;
+  margin: 24px 0 0;
+  color: var(--fish-footer-muted);
+  font-family: var(--fonts-serif);
+  font-size: clamp(20px, 1.7vw, 26px);
+  font-weight: 300;
+  letter-spacing: -0.018em;
+  line-height: 1.25;
+}
+
+.fish-site-footer__nav {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 clamp(28px, 4vw, 68px);
+  border-top: 1px solid var(--fish-footer-rule);
+}
+
+.fish-site-footer__nav a {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--fish-footer-rule);
+  color: var(--fish-footer-cream);
+  font-family: var(--fonts-mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.055em;
+  line-height: 1.25;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 180ms ease, background-color 180ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .fish-site-footer__nav a:hover {
+    color: #c8c0ff;
+    background: rgb(243 240 232 / 5%);
+  }
+}
+
+.fish-site-footer a:focus-visible {
+  outline: 3px solid #c8c0ff;
+  outline-offset: 4px;
+}
+
+.fish-site-footer__signature {
+  margin: auto 0 0;
+  padding-top: 120px;
+  color: rgb(243 240 232 / 78%);
+  font-family: var(--fonts-mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+@media (max-width: 70em) {
+  .fish-site-footer__top {
+    grid-template-columns: minmax(220px, 0.55fr) minmax(450px, 1.45fr);
+    gap: 54px;
+  }
+
+  .fish-site-footer__nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 48em) {
+  .fish-site-footer {
+    min-height: 559px;
+  }
+
+  .fish-site-footer__inner {
+    width: 100%;
+    padding: 52px 24px 28px;
+  }
+
+  .fish-site-footer__top {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .fish-site-footer__nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fish-site-footer__nav a {
+    min-height: 50px;
+    font-size: 10px;
+  }
+
+  .fish-site-footer__signature {
+    padding-top: 48px;
+  }
+}
+
+@media (max-width: 30em) {
+  .fish-site-footer {
+    min-height: 605px;
+  }
+
+  .fish-site-footer__nav {
+    grid-template-columns: 1fr;
+  }
+
+  .fish-site-footer__nav a {
+    min-height: 44px;
+  }
+
+  .fish-site-footer__signature {
+    padding-top: 36px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fish-site-footer__nav a {
+    transition: color 180ms ease;
+  }
+}

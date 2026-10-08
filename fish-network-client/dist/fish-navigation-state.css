@@ -1,0 +1,21 @@
+/* One scroll-driven pill state for the homepage and shared route navigation. */
+.site-header_navigation__CGCa2 ._top-level-list_12i4m_84,
+.fish-site-header__links {
+  border-radius: 9999px;
+  background-color: transparent;
+  box-shadow: 0 0 0 1px transparent;
+  transition: background-color 180ms ease, box-shadow 180ms ease;
+}
+
+html[data-fish-nav-scrolled] .site-header_navigation__CGCa2 ._top-level-list_12i4m_84,
+html[data-fish-nav-scrolled] .fish-site-header__links {
+  background-color: #080b13;
+  box-shadow: 0 0 0 1px rgb(243 240 232 / 18%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header_navigation__CGCa2 ._top-level-list_12i4m_84,
+  .fish-site-header__links {
+    transition: none;
+  }
+}

@@ -1,0 +1,24 @@
+/* Page-local editorial layer. Shared tokens, hero, motion and assets unchanged. */
+.fish-copy-v2.fish-copy-v2 .thesis-chapter {
+  border-top:1px solid var(--school-rule);
+  background:var(--school-bg, #080b13);
+}
+.fish-copy-v2.fish-copy-v2 .thesis-reading { max-width:720px; }
+.fish-copy-v2.fish-copy-v2 .thesis-heading { margin-bottom:32px; }
+.fish-copy-v2.fish-copy-v2 .thesis-heading .school-eyebrow { margin:0 0 22px; }
+.fish-copy-v2.fish-copy-v2 .thesis-heading h2 { margin:0; max-width:26ch; }
+.fish-copy-v2.fish-copy-v2 .thesis-prose .thesis-paragraph {
+  margin:0;
+  font-size:var(--fn-body);
+  line-height:1.8;
+  color:var(--school-muted);
+}
+.fish-copy-v2.fish-copy-v2 .thesis-prose > .thesis-paragraph + .thesis-paragraph,
+.fish-copy-v2.fish-copy-v2 .thesis-subsection + .thesis-paragraph { margin-top:24px; }
+.fish-copy-v2.fish-copy-v2 .thesis-subsection { margin-top:40px; }
+.fish-copy-v2.fish-copy-v2 .thesis-subsection h3 { margin:0 0 16px; max-width:32ch; }
+.fish-copy-v2.fish-copy-v2 .thesis-chapter .school-actions { margin-top:32px; }
+@media(max-width:600px) {
+  .fish-copy-v2.fish-copy-v2 .thesis-heading { margin-bottom:26px; }
+  .fish-copy-v2.fish-copy-v2 .thesis-subsection { margin-top:32px; }
+}
